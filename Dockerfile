@@ -8,3 +8,5 @@ RUN mkdir -p /gnucash/build-cmake
 RUN mkdir -p /opt/gnucash-cmake
 
 RUN cd /gnucash/build-cmake && cmake -D CMAKE_INSTALL_PREFIX=/gnucash-cmake -D WITH_AQBANKING=OFF -D WITH_SQL=OFF ..
+RUN cd /gnucash/build-cmake && make
+RUN cd /gnucash/build-cmake && make install
