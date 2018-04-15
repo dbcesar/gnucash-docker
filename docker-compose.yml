@@ -1,0 +1,12 @@
+version: '2'
+services:
+  transmission:
+    image: gnucash
+    container_name: gnucash
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /tmp/.X11-unix/:/tmp/.X11-unix/
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - DISPLAY:$DISPLAY
