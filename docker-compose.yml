@@ -1,6 +1,6 @@
 version: '2'
 services:
-  transmission:
+  gnucash:
     image: gnucash
     container_name: gnucash
     volumes:
@@ -9,4 +9,5 @@ services:
     environment:
       - PGID=1000
       - PUID=1000
-      - DISPLAY:$DISPLAY
+      - DISPLAY=$DISPLAY
+    tty: true
