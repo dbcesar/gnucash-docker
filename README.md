@@ -12,6 +12,12 @@ After this, an image will be created.
 
 In order to run, just call the docker-compose:
 
-1. Inside the folder: `docker-compose up`
+1. Inside the folder: `docker-compose up -d`
+1. You can call gnucash running: `docker exec -ti gnucash /bin/bash`
+1. Optionally you can call gnucash directly by running `docker exec -ti gnucash /gnucash-cmake/bin/gnucash`
+
+NOTES:
+You may need to adjust permissions to the X server host by running `xhost +local:root` 
+
 
 That is it.
